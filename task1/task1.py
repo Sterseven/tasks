@@ -25,4 +25,3 @@ else:
         print('{:0.2f}\n'.format(elem))
 
     
-
