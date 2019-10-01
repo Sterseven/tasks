@@ -34,6 +34,3 @@ while n != 16:
 print(ff.index(max(ff)) + 1)
                  
 
-     
-
-
