@@ -101,7 +101,6 @@ if len(list1) > 0:
         interv.append(time.strftime('%H:%M:%S', time.gmtime((raz[x][-1] + 480 + 1)*60)))
         inte.append(interv)
         
-
     nar = []
     
     for x in range(len(inte)):
@@ -119,13 +118,12 @@ if len(list1) > 0:
             if elem[0] == '0':
                 sf.append(elem[1:])
                 
-
             else:
                 sf.append(elem)
-
             
         ex.append(sf)
-        
+ 
+
     for x in range(len(ex)):
         print(ex[x][0] + ' ' + ex[x][1] + '\n')
          
