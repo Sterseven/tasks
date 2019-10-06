@@ -66,7 +66,6 @@ if len(list1) > 0:
         one +=1
         nnn += 1
     
-
            
     if len(tfn) == 0 and max(pmin) == 0:
         print ("No visitors")
@@ -75,11 +74,9 @@ if len(list1) > 0:
     if len(tfn) == 0:
         print(list1[0] + "\n")
        
-    
-    
+       
     raz = []
-
-            
+           
     for x in range(len(inmaxtf)):
         if x in tfn:
             
@@ -88,7 +85,6 @@ if len(list1) > 0:
     raz.append(inmaxtf)
 
     
-
     raz2 = []
 
     raz2.append(inmaxtf)
