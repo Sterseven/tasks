@@ -8,7 +8,7 @@ with open(filee) as f:
     for line in f:
         list1.append(line)
 
-if len(list1) == 0:
+if len(list1) == 0:       
     print("No visitors")
 
 else:
@@ -49,26 +49,31 @@ else:
     vis = []
 
     d = {}
-
     
     
+    
+
+    if len(inter) == 2:
+        show = '{:.2f}'.format(inter[0]).replace('.', ':')
+        print(show, end=' ')
+        show = '{:.2f}'.format(inter[1]).replace('.', ':')
+        print(show)
+        
+
+    else:
+        
+        for elem in range(len(inter) - 1):
+            vis.append(0)
+            for x in range(len(t)):
+                if t[x][0] <= inter[elem] < inter[elem + 1] <= t[x][1]:
+                    vis[elem] += 1
+        bol = max(vis)
 
 
-    for elem in range(len(inter) - 1):
-        vis.append(0)
-        for x in range(len(t)):
-            if t[x][0] <= inter[elem] < inter[elem + 1] <= t[x][1]:
-                vis[elem] += 1
-    bol = max(vis)
-
-
-    for x in range(len(inter) - 1):
-        if bol == vis[x] and (x == 0 or bol != vis[x - 1]):
-            show = '{:.2f}'.format(inter[x]).replace('.', ':')
-            print(show, end=' ')
-        if bol != vis[x] and bol == vis[x - 1]:
-            show = '{:.2f}'.format(inter[x]).replace('.', ':')
-            print(show)
-
-                  
-                  
+        for x in range(len(inter) - 1):
+            if bol == vis[x] and (x == 0 or bol != vis[x - 1]):
+                show = '{:.2f}'.format(inter[x]).replace('.', ':')
+                print(show, end=' ')
+            if bol != vis[x] and bol == vis[x - 1]:
+                show = '{:.2f}'.format(inter[x]).replace('.', ':')
+                print(show)
